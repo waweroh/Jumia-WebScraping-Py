@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 
 response = r.get("https://www.jumia.co.ke/home-office-appliances/")
 jumia_text = response.text
+
 soup = BeautifulSoup(jumia_text, "html.parser")
 
 items = (soup.find_all("div", class_= "img-c"))
