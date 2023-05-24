@@ -30,7 +30,7 @@ else:
 print(appliance_list)
 
 if appliance_list:
-    with open ("appliances.csv", "w", newline="") as csvfile:
+    with open ("appliances.csv", "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=appliance_list[0].keys())
         writer.writeheader()
         for appliance in appliance_list:
